@@ -120,3 +120,43 @@ function printPyramid(rows,symbol = '*') {
 }
 printPyramid(5,"#")
 
+// Inverted Pyramid
+// * * * * *
+//  * * * *
+//   * * *
+//    * *
+//     *
+function invertedPyramid(row) {
+    for(let i =row;i>=1;i--){
+        let pattern = "";
+        for(let k = 1;k<= row-i;k++){
+            pattern +=" ";
+        }
+        for(let j = 1;j<=i;j++){
+            pattern += '* '
+        }
+        console.log(pattern);
+    }
+}
+
+invertedPyramid(5)
+
+//NUmber Triangle 
+// 1
+// 1 2
+// 1 2 3
+// 1 2 3 4
+// 1 2 3 4 5
+function numberTriangle(row) {
+    
+    for (let i = 1; i < row; i++) {
+        let number =" ";
+        for(let j =1;j<=i;j++){
+            number += `${j} `;
+        }
+        console.log(number)
+        
+        
+    }
+}
+numberTriangle(6)
